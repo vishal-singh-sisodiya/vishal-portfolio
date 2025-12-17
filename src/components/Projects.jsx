@@ -76,16 +76,7 @@ export default function Projects() {
                       />
                     </div>
 
-                    {/* Content */}
-                    <div className="p-6 text-center">
-                      {project.featured && (
-                        <span
-                          className="inline-block mb-3 text-xs font-semibold tracking-wide uppercase"
-                          style={{ color: "var(--accent)" }}
-                        >
-                          Featured
-                        </span>
-                      )}
+                   
 
                       <h3 className="text-lg font-semibold mb-2">
                         {project.title}
