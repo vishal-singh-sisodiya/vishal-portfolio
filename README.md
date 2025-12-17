@@ -1,4 +1,4 @@
-# 🌐 Vishal Singh Sisodiya — Portfolio
+#  Vishal Singh Sisodiya — Portfolio
 
 Personal portfolio website showcasing my projects, skills, experience, and achievements as a **Computer Science undergraduate and aspiring Software Engineer / Full-Stack Developer**.
 
@@ -6,16 +6,16 @@ Built with modern frontend technologies and focused on clean UI, performance, an
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 **Portfolio:** https://your-portfolio-link.vercel.app  
-👉 **GitHub Repo:** https://github.com/vishal-singh-sisodiya/vishal-portfolio
+ **Portfolio:** https://your-portfolio-link.vercel.app  
+ **GitHub Repo:** https://github.com/vishal-singh-sisodiya/vishal-portfolio
 
 _(Update the live link after deployment)_
 
 ---
 
-## 🧑‍💻 About Me
+##  About Me
 
 I am a **Computer Science Engineering undergraduate** with strong skills in:
 
@@ -28,7 +28,7 @@ I am actively seeking **entry-level Software Engineer / Frontend / Full-Stack De
 
 ---
 
-## ✨ Features
+##  Features
 
 - Modern, responsive UI
 - Smooth animations using **Framer Motion**
@@ -40,7 +40,7 @@ I am actively seeking **entry-level Software Engineer / Frontend / Full-Stack De
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend**
 - React (Vite)
@@ -69,24 +69,17 @@ I am actively seeking **entry-level Software Engineer / Frontend / Full-Stack De
 
 ---
 
-## 📌 Featured Projects
+##  Featured Projects
 
-### 📚 Library Management Website
+###  Library Management Website
 - Full-stack MERN application
 - Admin analytics & user management
 - Secure and responsive UI
 
-### 📊 Banking Data Analysis
+###  Banking Data Analysis
 - Data analysis using Python & SQL
 - Exploratory Data Analysis (EDA)
 - Interactive dashboards with Power BI
 
 ---
 
-## 🧪 Run Locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/vishal-singh-sisodiya/vishal-portfolio.git
-cd vishal-portfolio
