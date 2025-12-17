@@ -3,10 +3,24 @@
 @tailwind utilities;
 
 /* Global theme */
-body {
+/* body {
   background-color: #0f172a;
   color: #e5e7eb;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+} */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Dark / Light Mode Base */
+html.dark body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+html:not(.dark) body {
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 /* Headings font */
@@ -30,4 +44,15 @@ h3 {
 }
 [data-theme="orange"] {
   --accent: #f97316;
+}
+/* ===== Dark / Light Mode Base ===== */
+
+html.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+html:not(.dark) {
+  background-color: #ffffff;
+  color: #0f172a;
 }

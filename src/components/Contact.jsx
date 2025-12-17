@@ -11,20 +11,25 @@ export default function Contact() {
           Get In <span style={{ color: "var(--accent)" }}>Touch</span>
         </h2>
 
-        <p className="text-gray-400 mb-10">
+        <p className="text-gray-500 dark:text-gray-400 mb-10">
           I’m currently open to entry-level Software Engineer / Frontend /
           Full-Stack opportunities. Feel free to reach out!
         </p>
 
         {/* Icons */}
         <div className="flex justify-center gap-8">
+          
           {/* Email */}
           <motion.a
             whileHover={{ scale: 1.2, y: -4 }}
             href="mailto:vishalsinghsisodiya.ofc@gmail.com"
-            className="text-2xl text-gray-300"
-            style={{ color: "var(--accent)" }}
             aria-label="Email"
+            className="
+              text-2xl
+              text-slate-800 dark:text-gray-300
+              hover:text-[var(--accent)]
+              transition
+            "
           >
             <FiMail />
           </motion.a>
@@ -34,8 +39,13 @@ export default function Contact() {
             whileHover={{ scale: 1.2, y: -4 }}
             href="https://www.linkedin.com/in/vishal-singh-sisodiya-0a4631264"
             target="_blank"
-            className="text-2xl text-gray-300 hover:text-white transition"
             aria-label="LinkedIn"
+            className="
+              text-2xl
+              text-slate-800 dark:text-gray-300
+              hover:text-[var(--accent)]
+              transition
+            "
           >
             <FaLinkedin />
           </motion.a>
@@ -45,8 +55,13 @@ export default function Contact() {
             whileHover={{ scale: 1.2, y: -4 }}
             href="https://github.com/vishal-singh-sisodiya"
             target="_blank"
-            className="text-2xl text-gray-300 hover:text-white transition"
             aria-label="GitHub"
+            className="
+              text-2xl
+              text-slate-800 dark:text-gray-300
+              hover:text-[var(--accent)]
+              transition
+            "
           >
             <FaGithub />
           </motion.a>
@@ -56,8 +71,13 @@ export default function Contact() {
             whileHover={{ scale: 1.2, y: -4 }}
             href="https://leetcode.com/u/user5412m/"
             target="_blank"
-            className="text-2xl text-gray-300 hover:text-white transition"
             aria-label="LeetCode"
+            className="
+              text-2xl
+              text-slate-800 dark:text-gray-300
+              hover:text-[var(--accent)]
+              transition
+            "
           >
             <SiLeetcode />
           </motion.a>

@@ -63,7 +63,15 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               href="https://github.com/vishal-singh-sisodiya"
               target="_blank"
-              className="px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition"
+              className="px-6 py-3 rounded-lg
+    border
+    border-slate-300 dark:border-white/30
+    text-slate-700 dark:text-gray-100
+    bg-transparent
+    hover:bg-slate-100
+    dark:hover:bg-white/10
+    transition-colors
+  "
             >
               GitHub
             </motion.a>

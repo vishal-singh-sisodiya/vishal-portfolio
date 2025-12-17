@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const navLinks = [
   { name: "About", href: "#about", id: "about" },
@@ -10,7 +11,21 @@ const navLinks = [
 
 export default function Navbar() {
   const [active, setActive] = useState("");
+  const [isDark, setIsDark] = useState(true);
 
+  // Set default dark mode
+  useEffect(() => {
+    const saved = localStorage.getItem("mode");
+    if (saved === "light") {
+      document.documentElement.classList.remove("dark");
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      setIsDark(true);
+    }
+  }, []);
+
+  // Intersection Observer for active link
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,6 +46,15 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  // Toggle dark/light
+  const toggleDarkMode = () => {
+    const html = document.documentElement;
+    html.classList.toggle("dark");
+    const dark = html.classList.contains("dark");
+    setIsDark(dark);
+    localStorage.setItem("mode", dark ? "dark" : "light");
+  };
+
   return (
     <motion.nav
       initial={{ y: -40, opacity: 0 }}
@@ -40,13 +64,14 @@ export default function Navbar() {
     >
       <div className="backdrop-blur-xl bg-black/40 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          
           {/* Logo */}
           <h1 className="text-xl font-semibold tracking-tight">
             Vishal<span style={{ color: "var(--accent)" }}>.</span>
           </h1>
 
-          {/* Desktop Links */}
-          <div className="flex gap-8 text-[15px] font-medium tracking-wide">
+          {/* Links + Toggle */}
+          <div className="flex items-center gap-8 text-[15px] font-medium tracking-wide">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -58,14 +83,23 @@ export default function Navbar() {
                 }`}
               >
                 {link.name}
-
                 <span
                   className={`absolute -bottom-1 left-0 h-[2px] bg-[var(--accent)] transition-all duration-300
-                  ${active === link.id ? "w-full" : "w-0 group-hover:w-full"}`}
+                  ${active === link.id ? "w-full" : "w-0"}`}
                 />
               </a>
             ))}
+
+            {/* Dark / Light Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="text-xl hover:scale-110 transition"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? <FiSun /> : <FiMoon />}
+            </button>
           </div>
+
         </div>
       </div>
     </motion.nav>
