@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global theme */
+body {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Headings font */
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Accent color */
+:root {
+  --accent: #38bdf8;
+}
+
+[data-theme="purple"] {
+  --accent: #a855f7;
+}
+[data-theme="green"] {
+  --accent: #22c55e;
+}
+[data-theme="orange"] {
+  --accent: #f97316;
+}
